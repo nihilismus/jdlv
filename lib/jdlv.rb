@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'jdlv/version'
+require 'jdlv/position'
 
 module Jdlv
   class Error < StandardError; end
-  # Your code goes here...
 end
