@@ -5,6 +5,5 @@ require 'jdlv/position'
 require 'jdlv/cell'
 require 'jdlv/grid'
 
-module Jdlv
-  class Error < StandardError; end
-end
+# Juego de la vida
+module Jdlv end
