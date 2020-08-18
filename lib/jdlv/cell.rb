@@ -8,7 +8,7 @@ module Jdlv
     def initialize(position)
       @position = position
       @current_state = :occupied
-      @next_state = nil
+      @next_state = :unknown
     end
   end
 end
