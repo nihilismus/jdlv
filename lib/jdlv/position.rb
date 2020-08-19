@@ -17,5 +17,17 @@ module Jdlv
     def positive_y_axis?
       @y_axis.positive?
     end
+
+    def ==(other)
+      @x_axis == other.x_axis && @y_axis == other.y_axis
+    end
+
+    def eql?(other)
+      self == other
+    end
+
+    def hash
+      [@x_axis, @y_axis].hash
+    end
   end
 end
