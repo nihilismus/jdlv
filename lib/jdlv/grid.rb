@@ -3,21 +3,16 @@
 module Jdlv
   # The Grid in the game.
   class Grid
-    def initialize(last_position, occupied_positions)
-      @last_position = last_position
+    attr_reader :x_axis_length, :y_axis_length
+
+    def initialize(last_position = Position.new, occupied_positions = [])
+      @x_axis_length = last_position.x_axis
+      @y_axis_length = last_position.y_axis
       @state = PositionsLoader.load occupied_positions
     end
 
     def area
-      @last_position.x_axis * @last_position.y_axis
-    end
-
-    def x_axis_length
-      @last_position.x_axis
-    end
-
-    def y_axis_length
-      @last_position.y_axis
+      @x_axis_length * @y_axis_length
     end
 
     def occupied_cells_count
