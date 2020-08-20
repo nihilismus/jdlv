@@ -18,6 +18,22 @@ module Jdlv
       @y_axis.positive?
     end
 
+    def previous_x_axis
+      @x_axis.pred
+    end
+
+    def next_x_axis
+      @x_axis.next
+    end
+
+    def previous_y_axis
+      @y_axis.pred
+    end
+
+    def next_y_axis
+      @y_axis.next
+    end
+
     def ==(other)
       @x_axis == other.x_axis && @y_axis == other.y_axis
     end
