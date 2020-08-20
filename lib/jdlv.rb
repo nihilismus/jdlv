@@ -5,7 +5,7 @@ require 'jdlv/position'
 require 'jdlv/cell'
 require 'jdlv/grid'
 
-require 'jdlv/positions'
+require 'jdlv/positions_locator'
 
 # Juego de la vida
 module Jdlv end
