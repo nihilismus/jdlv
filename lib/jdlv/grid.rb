@@ -8,7 +8,7 @@ module Jdlv
     def initialize(last_position = Position.new, occupied_positions = [])
       @x_axis_length = last_position.x_axis
       @y_axis_length = last_position.y_axis
-      @state = PositionsLoader.load occupied_positions
+      @state = Jdlv::PositionsLoader.load occupied_positions
     end
 
     def area
@@ -17,18 +17,6 @@ module Jdlv
 
     def occupied_cells_count
       @state.length
-    end
-
-    # Load Position objects into a Hash of
-    # Position object -> Cell object
-    class PositionsLoader
-      def self.load(positions)
-        initial_state = {}
-        positions.each do |position|
-          initial_state[position] = Cell.new(position)
-        end
-        initial_state
-      end
     end
   end
 end
