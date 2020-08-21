@@ -1,0 +1,146 @@
+bundle exec rubocop
+Inspecting 20 files
+....................
+
+20 files inspected, no offenses detected
+bundle exec rubocop --require rubocop-rspec
+Inspecting 20 files
+....................
+
+20 files inspected, no offenses detected
+bundle exec rubycritic --format console
+running flay smells
+[32m.[0m[32m.[0m[32m.[0m
+running flog smells
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running reek smells
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running complexity
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running attributes
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running churn
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+running simple_cov
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+CellSpec:
+  Rating:       A
+  Churn:        3
+  Complexity:   27.4
+  Duplication:  0
+  Smells:       0
+
+GridSpec:
+  Rating:       A
+  Churn:        6
+  Complexity:   33.73
+  Duplication:  0
+  Smells:       0
+
+Jdlv:
+  Rating:       A
+  Churn:        2
+  Complexity:   0.0
+  Duplication:  0
+  Smells:       0
+
+Jdlv:
+  Rating:       A
+  Churn:        9
+  Complexity:   0.0
+  Duplication:  0
+  Smells:       0
+
+Jdlv::Cell:
+  Rating:       A
+  Churn:        3
+  Complexity:   13.33
+  Duplication:  0
+  Smells:       0
+
+Jdlv::Position:
+  Rating:       A
+  Churn:        5
+  Complexity:   16.9
+  Duplication:  0
+  Smells:       0
+
+Jdlv::PositionsLoader:
+  Rating:       A
+  Churn:        1
+  Complexity:   3.13
+  Duplication:  0
+  Smells:       0
+
+JdlvSpec:
+  Rating:       A
+  Churn:        3
+  Complexity:   4.8
+  Duplication:  0
+  Smells:       0
+
+PositionSpec:
+  Rating:       A
+  Churn:        2
+  Complexity:   41.82
+  Duplication:  0
+  Smells:       0
+
+SpecHelper:
+  Rating:       A
+  Churn:        2
+  Complexity:   0.0
+  Duplication:  0
+  Smells:       0
+
+Jdlv::Grid:
+  Rating:       B
+  Churn:        6
+  Complexity:   58.22
+  Duplication:  0
+  Smells:       1
+    * (TooManyStatements) Jdlv::Grid#free_positions has approx 6 statements
+      - lib/jdlv/grid.rb:78
+
+Jdlv::PositionsLocator:
+  Rating:       B
+  Churn:        2
+  Complexity:   28.69
+  Duplication:  32
+  Smells:       1
+    * (DuplicateCode) Similar code found in 2 nodes
+      - lib/jdlv/positions_locator.rb:16
+      - lib/jdlv/positions_locator.rb:33
+
+PositionsLoaderSpec:
+  Rating:       B
+  Churn:        1
+  Complexity:   32.7
+  Duplication:  19
+  Smells:       1
+    * (DuplicateCode) Similar code found in 3 nodes
+      - spec/jdlv/positions_loader_spec.rb:5
+      - spec/jdlv/positions_locator_spec.rb:5
+      - spec/jdlv/positions_locator_spec.rb:11
+
+GridTickSpec:
+  Rating:       C
+  Churn:        1
+  Complexity:   77.28
+  Duplication:  34
+  Smells:       1
+    * (DuplicateCode) Similar code found in 2 nodes
+      - spec/jdlv/grid_tick_spec.rb:24
+      - spec/jdlv/grid_tick_spec.rb:29
+
+PositionsLocatorSpec:
+  Rating:       C
+  Churn:        1
+  Complexity:   78.3
+  Duplication:  38
+  Smells:       1
+    * (DuplicateCode) Similar code found in 3 nodes
+      - spec/jdlv/positions_loader_spec.rb:5
+      - spec/jdlv/positions_locator_spec.rb:5
+      - spec/jdlv/positions_locator_spec.rb:11
+Score: 90.56

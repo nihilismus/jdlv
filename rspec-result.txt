@@ -1,0 +1,38 @@
+bundle exec rspec
+
+Jdlv::Cell
+  is in a occupied current state by default
+  is in an unknown next state by default
+
+Jdlv::Grid
+  has an area of 32
+  has 3 occupied positions
+
+Jdlv::Grid
+  does not change the number of occupied positions
+  frees one original occupied position
+  occupies one original free position
+  keeps occupied one original occupied position
+
+Jdlv::Position
+  is in the positive side of x axis
+  is in the positive side of y axis
+  is not on the positive side of the x axis
+  is not on the positive side of the y axis
+
+Jdlv::PositionsLoader
+  returns an empty hash
+  returns a hash with 3 positions as keys
+
+Jdlv::PositionsLocator
+  finds the neighbours at the top
+  finds the neighbours at both sides
+  finds the neighbours at the bottom
+  finds the neighbours around
+
+Jdlv
+  has a version number
+
+Finished in 0.01008 seconds (files took 0.10904 seconds to load)
+19 examples, 0 failures
+
