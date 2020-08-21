@@ -6,7 +6,7 @@ module Jdlv
     def self.around(position)
       positions = []
       positions.concat(at_top(position))
-      positions.concat(both_side(position))
+      positions.concat(at_both_sides(position))
       positions.concat(at_bottom(position))
       positions
     end
@@ -20,11 +20,11 @@ module Jdlv
       ]
     end
 
-    def self.both_side(position)
+    def self.at_both_sides(position)
       current_row = position.y_axis
       [
-        Position.new(position.previous_y_axis, current_row),
-        Position.new(position.next_y_axis, current_row)
+        Position.new(position.previous_x_axis, current_row),
+        Position.new(position.next_x_axis, current_row)
       ]
     end
 
