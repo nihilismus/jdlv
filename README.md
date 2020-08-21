@@ -29,12 +29,12 @@ the Game of Life by creating an initial configuration and observing how it evolv
 
   - Example:
 
-      $ bundle exec exe/jdlv "10,10" "2,2|3,2|4,2|4,3|3,4" 5
-      Tick: 1, Pattern: 3,2|4,2|4,3|2,3|3,1
-      Tick: 2, Pattern: 4,2|4,3|3,1|2,2|4,1
-      Tick: 3, Pattern: 4,2|3,1|4,1|3,3|5,2
-      Tick: 4, Pattern: 3,1|4,1|5,2|4,3|5,1
-      Tick: 5, Pattern: 4,1|5,2|5,1|3,2|4,0
+        $ bundle exec exe/jdlv "10,10" "2,2|3,2|4,2|4,3|3,4" 5
+        Tick: 1, Pattern: 3,2|4,2|4,3|2,3|3,1
+        Tick: 2, Pattern: 4,2|4,3|3,1|2,2|4,1
+        Tick: 3, Pattern: 4,2|3,1|4,1|3,3|5,2
+        Tick: 4, Pattern: 3,1|4,1|5,2|4,3|5,1
+        Tick: 5, Pattern: 4,1|5,2|5,1|3,2|4,0
 
 ## Desing
 
@@ -74,7 +74,7 @@ I found some dificulties:
 - Do enough refactoring to amend any problem detected by `rubocop` and `rubycritic`.
 - Test the game behaviour, wich is a *"living"* object during its execution.
 
-## Things to improve
+## Improvements
 
 In my opinion:
 
