@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'jdlv'
+
+# Open String
+class String
+  def to_position
+    splits = split(',')
+    Jdlv::Position.new(splits[0].to_i, splits[1].to_i)
+  end
+
+  def to_positions
+    split('|').map(&:to_position)
+  end
+end
+
+# Command line interface
+class CLI
+  def initialize(input)
+    parse_limit(input)
+    parse_pattern(input)
+    parse_ticks(input)
+  end
+
+  def parse_limit(input)
+    @limit = input[0].to_position
+  end
+
+  def parse_pattern(input)
+    @pattern = input[1].to_positions
+  end
+
+  def parse_ticks(input)
+    @ticks = input[2].to_i
+  end
+
+  def setup
+    @grid = Jdlv::Grid.new(@limit, @pattern)
+  end
+
+  def play
+    @ticks.times do |tick|
+      @grid.tick
+      puts "Tick: #{tick.next}, #{@grid}"
+    end
+  end
+end
+
+# Execute the game
+class Main
+  def initialize(args)
+    @cli = CLI.new(args)
+  end
+
+  def run
+    @cli.setup
+    @cli.play
+  end
+end
+
+Main.new(ARGV).run
