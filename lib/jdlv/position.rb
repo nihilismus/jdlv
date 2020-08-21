@@ -45,5 +45,9 @@ module Jdlv
     def hash
       [@x_axis, @y_axis].hash
     end
+
+    def to_s
+      "#{@x_axis},#{@y_axis}"
+    end
   end
 end
