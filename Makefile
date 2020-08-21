@@ -1,3 +1,6 @@
+run:
+	bundle exec exe/jdlv "100,100" "2,2|3,2|4,2|4,3|3,4" 5
+
 test:
 	bundle exec rspec
 
